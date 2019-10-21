@@ -9,7 +9,7 @@ class t_eq2_controller{
 
         var events = new t_events();
 
-        events.add_event("solve_clicked_uab",this.on_solve);
+        events.add_event("solve_clicked_uab",this.on_solve.bind(this));
 
         this.view.set_events_list(events);
     }
