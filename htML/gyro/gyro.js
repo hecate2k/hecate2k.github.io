@@ -15,4 +15,10 @@ function on_acc_data_uab(e){
     document.getElementById("id_x").innerHTML = acc.x.toFixed(2);
     document.getElementById("id_y").innerHTML = acc.y.toFixed(2);
     document.getElementById("id_z").innerHTML = acc.z.toFixed(2);
+
+    var rot_x = Math.atan(acc.x/acc.z)*100 / Math.PI;
+    var rot_y = Math.atan(acc.y/acc.z)*100 / Math.PI;
+
+    document.getElementById("id_rot_x").innerHTML = rot_x.toFixed(2);
+    document.getElementById("id_rot_y").innerHTML = rot_y.toFixed(2);
 }
