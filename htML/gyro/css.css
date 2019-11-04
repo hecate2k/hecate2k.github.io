@@ -13,10 +13,9 @@ html,body{
 p{
     
     color: #efefef;
-    /* border-radius: 5px; */
     padding: 7px;
-    
     box-sizing: border-box;
+    text-align: center;
 }
 .casuta{
     width: calc(100% - 10px);
@@ -24,6 +23,7 @@ p{
     
 }
 .casuta p{
+    text-align: left;
     background: #efefef;
     border-bottom: 1px solid rgba(55, 55, 83, 0.2);
     color: #2a2a2b;
