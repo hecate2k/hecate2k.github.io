@@ -1,0 +1,23 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background: #2a2a2b;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    border:0;
+    color: #efefef;
+}
+p{
+    width: 100%;
+    background: #ff879b;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 2px;
+    margin: 5px 5px 0px 5px;
+}
+p:nth-of-type(1),p:nth-of-type(2){
+    background: #2a2a2b;
+}
