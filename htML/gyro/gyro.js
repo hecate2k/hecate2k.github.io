@@ -12,7 +12,7 @@ function on_gyro_data_uab(e){
 function on_acc_data_uab(e){
     var acc = e.accelerationIncludingGravity;
 
-    document.getElementById("id_acc_x").innerHTML = acc.x.toFixed(2);
-    document.getElementById("id_acc_y").innerHTML = acc.y.toFixed(2);
-    document.getElementById("id_acc_z").innerHTML = acc.z.toFixed(2);
+    document.getElementById("id_x").innerHTML = acc.x.toFixed(2);
+    document.getElementById("id_y").innerHTML = acc.y.toFixed(2);
+    document.getElementById("id_z").innerHTML = acc.z.toFixed(2);
 }
