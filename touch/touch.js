@@ -1,10 +1,14 @@
 document.getElementById("id_logic").innerHTML = "Logic version: 2019.12.02.0"
 
 window.addEventListener("touchstart",touch_start_uab);
+window.addEventListener("touchmove",touch_move_uab);
 window.addEventListener("touchend",touch_end_uab);
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
+
+var canvas_rect = canvas.getBoundingClientRect();
+
 var last_position = [];
 
 function get_random_color(){
@@ -26,7 +30,7 @@ function touch_start_uab(p){
         touch_info.color = get_random_color();
 
         context.beginPath();
-        context.arc(t[i].pageX , t[i].pageY , 10 , 0 , 2 * Math.PI);
+        context.arc(t[i].pageX - canvas_rect.left, t[i].pageY - canvas_rect.top , 10 , 0 , 2 * Math.PI);
         console.log(touch_info);
         context.strokeStyle = touch_info.color;
         context.fillStyle = touch_info.color;
@@ -48,13 +52,15 @@ function touch_move_uab(p){
                 break;
             }
         context.beginPath();
-        context.moveTo(last_position[index_t].x,last_position[index_t].y);
+        context.moveTo(last_position[index_t].x - canvas_rect.left,last_position[index_t].y - canvas_rect.top);
         context.lineTo(t[i].pageX,t[i].pageY);
         context.strokeStyle = last_position[index_t].color;
         context.fillStyle = last_position[index_t].color;
         context.lineWidth = 20;
         context.fill();
         context.stroke();
+        last_position[index_t].x = t[i].pageX;
+        last_position[index_t].y = t[i].pageY;
     }
 }
 
