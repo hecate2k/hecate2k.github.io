@@ -34,6 +34,10 @@ p:last-of-type{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+.convas{
+    display:flex;
+    justify-content: center;
+}
 canvas{
     margin-left: auto;
     margin-right: auto;
